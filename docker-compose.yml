@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  tensorflow:
+    image: tensorflow
+    container_name: tensorflow
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'

@@ -1,0 +1,11 @@
+{
+  "name": "tensorflow",
+  "version": "0.0.1",
+  "description": "Tensorflow Boilerplate",
+  "main": "index.py",
+  "scripts": {
+    "build": "docker-compose -f docker-compose.yml up -d --build"
+  },
+  "author": "ccau1",
+  "license": "ISC"
+}
