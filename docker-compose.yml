@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
   tensorflow:
-    image: tensorflow
-    container_name: tensorflow
+    image: tensorflow-jupyter
+    container_name: tensorflow-jupyter
     build:
       context: .
       dockerfile: Dockerfile

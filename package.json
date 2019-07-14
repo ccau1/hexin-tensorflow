@@ -4,7 +4,12 @@
   "description": "Tensorflow Boilerplate",
   "main": "index.py",
   "scripts": {
-    "build": "docker-compose -f docker-compose.yml up -d --build"
+    "script": "yarn start:script && yarn log:script",
+    "start:script": "docker-compose -f docker-compose.script.yml up -d --build",
+    "log:script": "docker logs -f tensorflow-script --since $(date \"+%s\")",
+    "start": "yarn build:jupyter && yarn log:jupyter",
+    "log:jupyter": "docker logs -f tensorflow-jupyter --since $(date \"+%s\")",
+    "build:jupyter": "docker-compose -f docker-compose.yml up -d --build"
   },
   "author": "ccau1",
   "license": "ISC"

@@ -1,8 +1,11 @@
 # for more explicit dockerfile build with keras and conda
 # https://github.com/keras-team/keras/blob/master/docker/Dockerfile
 
+ARG FILE
 
 FROM tensorflow/tensorflow:latest-py3-jupyter
+
+ARG FILE
 
 # set working directory
 #     create app folder
@@ -12,4 +15,5 @@ WORKDIR /tf
 
 COPY ./tf /tf
 
-CMD jupyter notebook --port=8888 --ip=0.0.0.0 --allow-root
+CMD ["python", "script.py"]
+# CMD jupyter notebook --port=8888 --ip=0.0.0.0 --allow-root
