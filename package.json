@@ -1,5 +1,5 @@
 {
-  "name": "tensorflow",
+  "name": "hexin-tensorflow",
   "version": "0.0.1",
   "description": "Tensorflow Boilerplate",
   "main": "index.py",
